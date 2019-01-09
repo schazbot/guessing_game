@@ -2,18 +2,20 @@ puts ("Hello! What is your name?")
 name=gets.chomp
 puts ("Welcome to the guessing game #{name}!  Can you guess what number I am thinking of?")
 number=rand(1..100)
-puts ("Please guess my number!  It is bigger than 1, but less than 100")
+puts ("Please guess my number!  It is more than 1, but less than 100")
 winner=false
 
-while win==false
-	guess+gets.to_i
+while winner==false
+	guess=gets.to_i
+  
 	if guess>number then
-	puts("Sorry, that number is too high...keep trying!")
+	puts ("Sorry, that number is too high...keep trying!")
 	elsif guess<number then	
 		puts ("Sorry, that number is too low...keep trying!")
 	else
 		puts ("Woohoo #{name} , you win!")
+		winner=true
 
-		win=true
+    
 	end
 end
